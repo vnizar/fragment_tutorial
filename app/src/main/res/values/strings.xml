@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LatihanFragment</string>
+    <string name="title">This is Main Fragment</string>
+    <string name="attach">Attach</string>
+    <string name="next_activity">Next Activity</string>
+    <string name="this_is_content">This is content</string>
+</resources>

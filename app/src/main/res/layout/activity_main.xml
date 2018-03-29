@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="excercise.voen.latihanfragment.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/container_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_100dp"
+        android:background="#e2e2e2"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/container_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_100dp"
+        android:background="#a3a"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/container_1" />
+
+    <Button
+        android:id="@+id/bt_attach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:text="@string/attach"
+        app:layout_constraintTop_toBottomOf="@+id/container_2" />
+
+    <Button
+        android:id="@+id/bt_next_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:text="@string/next_activity"
+        app:layout_constraintTop_toBottomOf="@+id/bt_attach" />
+
+
+</android.support.constraint.ConstraintLayout>
