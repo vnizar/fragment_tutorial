@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import static excercise.voen.latihanfragment.MainFragment.FragmentBundleKey.BUNDLE_KEY;
 
+// implement callback interface from fragment to activity
 public class MainActivity extends AppCompatActivity implements MainFragment.FragmentCallback {
 
     @Override
