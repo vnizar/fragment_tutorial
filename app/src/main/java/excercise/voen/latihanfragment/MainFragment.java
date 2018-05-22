@@ -21,10 +21,12 @@ public class MainFragment extends Fragment {
         String BUNDLE_KEY = "item_key";
     }
 
+    // step 4 : learn about callback concept
     interface FragmentCallback {
         void onIconClick();
     }
 
+    // step 3 : learn how pass data from activity to fragment 
     static MainFragment newInstance(Bundle bundle) {
         MainFragment mainFragment = new MainFragment();
         mainFragment.setArguments(bundle);
@@ -33,12 +35,14 @@ public class MainFragment extends Fragment {
 
     FragmentCallback callback;
 
+    // step 1 : learn how to create fragment's view
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_main, container, false);
     }
 
+    // step 2 : learn how to handle data from bundle / modify default values from created view   
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         Bundle bundle = getArguments();
@@ -62,12 +66,14 @@ public class MainFragment extends Fragment {
         }
     }
 
+    // step 5 : learn how to attach callback from activity
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         callback = (FragmentCallback) context;
     }
 
+    // step 6 : learn how to handle callback
     private void setupFragmentWithBundle(View view, Bundle bundle) {
         MessageItem item = bundle.getParcelable(BUNDLE_KEY);
 
